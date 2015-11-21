@@ -20,7 +20,7 @@ a {
 }
 
 #highlight {
-	background-color: yellow;
+    background: rgba(255, 0, 0, 4);
 	width: 200px;
 	height: 200px;
 	line-height: 200px;
@@ -34,4 +34,10 @@ a {
 	background-color: blue;
 	width: 100%;
 	height: 200px;
+}
+
+#square {
+	width: 100px;
+	height: 100px;
+	background: red;
 }
