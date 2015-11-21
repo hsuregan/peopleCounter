@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var counter = 0;
+var locked = 0;
+var incremented = 0;
+var decremented = 0;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,15 +17,24 @@ router.post('/', function(req, res, next) {
 })
 
 router.get('/increment', function(req, res, next) {
-	counter += 1;
+	if(incremented == 0) {
+		incremented = 1;
+	} else if(decremented == 1) {
+		counter--;
+		decremented = 0;
+	}
 	res.json(counter);
 })
 
 router.get('/decrement', function(req, res, next) {
-	counter -= 1;
+	if(incremented = 1) {
+		counter++;
+		incremented = 0;
+	} else if(decremented == 0) {
+		decremented = 1;
+	}
 	res.json(counter);
 })
-
 
 router.post('/increment', function(req, res, next) {
 	counter += 1;
