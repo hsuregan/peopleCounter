@@ -16,12 +16,12 @@ router.post('/', function(req, res, next) {
 })
 
 router.get('/increment', function(req, res, next) {
-	if(incremented == 0) {
-		incremented = 1;
-	} else if(decremented == 1) {
+	if(decremented == 1) {
 		counter--;
 		decremented = 0;
-	}
+	} else if(incremented == 0) {
+		incremented = 1;
+	} 
 	res.json(counter);
 })
 
