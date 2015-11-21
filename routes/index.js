@@ -35,22 +35,22 @@ router.get('/decrement', function(req, res, next) {
 	res.json(counter);
 })
 
-router.post('/reset', function(req, res, next) {
-	counter = 0;
-	incremented = 0;
-	decremented = 0;
-	res.json(counter);
-})
+// router.post('/reset', function(req, res, next) {
+// 	counter = 0;
+// 	incremented = 0;
+// 	decremented = 0;
+// 	res.json(counter);
+// })
 
-router.post('/increment', function(req, res, next) {
-	counter += 1;
-	res.json(counter);
-})
+// router.post('/increment', function(req, res, next) {
+// 	counter += 1;
+// 	res.json(counter);
+// })
 
-router.post('/decrement', function(req, res, next) {
-	counter -= 1;
-	res.json(counter);
-})
+// router.post('/decrement', function(req, res, next) {
+// 	counter -= 1;
+// 	res.json(counter);
+// })
 
 router.get('/count', function(req, res, next){
 	res.json(counter);
