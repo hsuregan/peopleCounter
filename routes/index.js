@@ -17,7 +17,7 @@ router.post('/', function(req, res, next) {
 
 router.get('/increment', function(req, res, next) {
 	if(decremented == 1) {
-		counter--;
+		counter = counter - 1;
 		decremented = 0;
 	} else if(incremented == 0) {
 		incremented = 1;
@@ -27,7 +27,8 @@ router.get('/increment', function(req, res, next) {
 
 router.get('/decrement', function(req, res, next) {
 	if(incremented = 1) {
-		counter++;
+		console.log("counter++!");
+		counter = counter + 1;
 		incremented = 0;
 	} else if(decremented == 0) {
 		decremented = 1;
