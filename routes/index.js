@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var counter = 0;
-var locked = 0;
 var incremented = 0;
 var decremented = 0;
 
@@ -33,6 +32,13 @@ router.get('/decrement', function(req, res, next) {
 	} else if(decremented == 0) {
 		decremented = 1;
 	}
+	res.json(counter);
+})
+
+router.post('/reset', function(req, res, next) {
+	counter = 0;
+	incremented = 0;
+	decremented = 0;
 	res.json(counter);
 })
 
