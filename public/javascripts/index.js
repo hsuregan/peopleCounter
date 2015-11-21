@@ -2,6 +2,7 @@ var background = "rgba(255, 0, 0,";
 var people = [];
 var time = [];
 var max = 0;
+var count = 0;
 
 $(document).ready(
   function() {
@@ -62,7 +63,7 @@ $(document).ready(
   
 
   setInterval(function() {
-     $.getJSON("http://localhost:3000/count", function(response) {
+     $.getJSON("http://107.170.149.67/count", function(response) {
       //console.log(response);
       $('#highlight').css('background', background+(response*0.05));
       $('#count').html(response);
