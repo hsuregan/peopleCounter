@@ -26,7 +26,8 @@ router.get('/increment', function(req, res, next) {
 })
 
 router.get('/decrement', function(req, res, next) {
-	if(incremented = 1) {
+	console.log("incremented: " + incremented);
+	if(incremented == 1) {
 		console.log("counter++!");
 		counter = counter + 1;
 		incremented = 0;
