@@ -3,11 +3,14 @@ html
   head
     title= title
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    link(rel='stylesheet', href='/font/font.css')
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+
     link(rel='stylesheet', href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
     script(src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
   body
-    h1#title="Room Occupancy Counter"
+    h1#title="Room Occupancy"
     #highlight
       h1#count=counter
     
