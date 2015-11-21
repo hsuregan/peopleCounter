@@ -1,5 +1,17 @@
-extends layout
+doctype html
+html
+  head
+    title= title
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #highlight
+      h1#count=counter
+    
+    br
+    br
 
-block content
-  h1= counter
-  
+    div#visual
+
+script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+script(src='javascripts/index.js')
