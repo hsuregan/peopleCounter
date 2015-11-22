@@ -4,9 +4,34 @@ var time = [];
 var max = 0;
 var count = 0;
 
+var sec = 0;
+var min = 0;
+var hrs = 0;
+
+
 $(document).ready(
   function() {
- 
+
+
+  setInterval(function() {
+     if(sec == 59) {
+        sec = 0;
+        if(min == 59) {
+          min = 0;
+          hrs = hrs + 1;
+        } else {
+          min = min + 1;
+        }
+     } else {
+        sec = sec + 1;
+     }
+
+     //set elements here
+     $('#time').html(hrs + " hrs " + min + " mins " + sec + " secs have elapsed");
+
+   }, 1000);
+
+
 
   var theChart = new Chartist.Line('.ct-chart', {
       labels: [1, 2, 3, 4, 5, 6, 7, 8],
