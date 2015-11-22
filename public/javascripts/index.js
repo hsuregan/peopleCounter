@@ -33,9 +33,9 @@ function go(full) {
 
 
   var theChart = new Chartist.Line('.ct-chart', {
-      labels: [1, 2, 3, 4, 5, 6, 7, 8],
+      labels: [0],
       series: [
-        [1, 2, 3, 1, 2, 0, 1, 0]
+        [0]
       ]
     }, {
       height: 200,
@@ -58,6 +58,7 @@ function go(full) {
 
       }
     });
+
 
   //   theChart.on('draw', function(data) {
   //   // If this draw event is of type bar we can use the data to create additional content
@@ -111,6 +112,7 @@ function go(full) {
 
      }).fail()
    }, 1000);
+
 
 
 

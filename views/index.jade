@@ -49,14 +49,24 @@ script.
 
         $('#submit').click(function() {
             if(!isNaN(max.val())) {
-                
-                $('#requestMax').next().animate({width: 'toggle'});
-                $('#requestMax').css('display', 'none');
-                $('#highlight').css('display', 'block');
+                $('#about').fadeOut(50, function(){
+                    $('#requestMax').fadeOut(15, function(){
+                    setTimeout(function(){ 
+                        $('#highlight').fadeIn(50);
+                        $('#time').css('visibility','visible').hide().fadeIn(3000);
+                        $('#about').fadeIn();
+                        $('.ct-chart').fadeIn();
+                    }, 50);
+                    });                
+                });
+
+
+
 
 
                 $.getJSON("http://107.170.149.67/reset", function() {
                         go(max.val());
+
                      }).fail()
 
             } else {
