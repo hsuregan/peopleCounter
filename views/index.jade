@@ -29,7 +29,7 @@ html
     #highlight
       h1#count=counter
     h1#WARNING
-    h2#time
+    h2#time &nbsp;
     
     br
     .ct-chart
@@ -43,10 +43,17 @@ html
 script.
     $(document).ready(function(){
         var max = $('#max');
+
+
+
+
         $('#submit').click(function() {
             if(!isNaN(max.val())) {
-                $('#highlight').css('display', 'block');
+                
+                $('#requestMax').next().animate({width: 'toggle'});
                 $('#requestMax').css('display', 'none');
+                $('#highlight').css('display', 'block');
+
 
                 $.getJSON("http://107.170.149.67/reset", function() {
                         go(max.val());

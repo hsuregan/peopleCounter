@@ -11,6 +11,7 @@ body {
   margin: 0px;
 }
 
+
 a {
   color: #00B7FF;
 }
@@ -93,7 +94,6 @@ button:focus {
 
 #highlight {
 	display: none;
-    background: rgba(255, 0, 0, 4);
 	width: 200px;
 	height: 200px;
 	line-height: 200px;

@@ -27,6 +27,7 @@ function go(full) {
      //set elements here
      $('#time').html(hrs + " hrs " + min + " mins " + sec + " secs have elapsed");
 
+
    }, 1000);
 
 
@@ -94,7 +95,7 @@ function go(full) {
       time.push(time.length+1);
       people.push(response);
       updateChart(time, people);
-      if(people[people.length-1] == full) {
+      if(people[people.length-1] >= full) {
         console.log($('body').css('background-color'));
         $('#WARNING').html('<br /> MAXIMUM CAPACITY REACHED');
         if($('body').css('background-color') == 'rgb(255, 0, 0)') {
