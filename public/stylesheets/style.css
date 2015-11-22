@@ -35,12 +35,10 @@ h1#title {
 	font: 'apercu_lightregular' !important;
 	text-align: center;
 	color: grey;
-	border: 2px solid indigo;
 	margin-left: 10%;
 	margin-right: 10%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	border-radius: 25px;
 
 }
 
@@ -48,7 +46,53 @@ h1#title {
 	font: 'apercu_lightregular';
 }
 
+#max {
+	border: none;
+    border-bottom: indigo solid;
+    width: 50%;
+    font-size: 50px;
+    text-align: center;
+    color: indigo;
+    margin-top: 5%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  gray;
+    font-family: 'apercu_lightregular';
+    font-size: 40px;
+    margin-top: 5%; 
+}
+
+#submit {
+	background-color: white;
+	font-size: 20px;
+	font-family: 'apercuregular';
+	border: solid indigo 2px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	border-radius: 10px;
+	transition: background-color 0.5s, color 0.5s;
+
+}
+
+#submit:hover {
+	background-color: indigo;
+	color: white;
+	transition: background-color 0.5s, color 0.5s;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 #highlight {
+	display: none;
     background: rgba(255, 0, 0, 4);
 	width: 200px;
 	height: 200px;
@@ -58,7 +102,7 @@ h1#title {
 	font-size: 50px;
 	margin-top: 0px;
 	border-radius: 100%;
-	border: solid red 5px;
+	border: solid red 5px
 }
 
 #visual {

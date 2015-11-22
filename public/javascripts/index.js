@@ -9,10 +9,8 @@ var min = 0;
 var hrs = 0;
 
 
-$(document).ready(
-  function() {
-
-
+//$(document).ready(
+function go(full) {
   setInterval(function() {
      if(sec == 59) {
         sec = 0;
@@ -88,13 +86,26 @@ $(document).ready(
   
 
   setInterval(function() {
-     $.getJSON("http://localhost:3000/count", function(response) {
+     $.getJSON("http://107.170.149.67/count", function(response) {
       //console.log(response);
-      $('#highlight').css('background', background+(response*0.05));
+      console.log('FULL: ' + 1/full);
+      $('#highlight').css('background', background+(response*(1/full)));
       $('#count').html(response);
       time.push(time.length+1);
       people.push(response);
       updateChart(time, people);
+      if(people[people.length-1] == full) {
+        console.log($('body').css('background-color'));
+        $('#WARNING').html('<br /> MAXIMUM CAPACITY REACHED');
+        if($('body').css('background-color') == 'rgb(255, 0, 0)') {
+          $('body').css('background-color', 'white');
+        } else {
+          $('body').css('background-color', 'red');
+        }
+      } else {
+        $('#WARNING').html('');
+        $('body').css('background-color', 'white');
+      }
 
 
      }).fail()
@@ -102,6 +113,6 @@ $(document).ready(
 
 
 
-  }
-);
+};
+//);
 

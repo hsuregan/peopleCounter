@@ -9,6 +9,9 @@ html
 
     link(rel='stylesheet', href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
     script(src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(src='javascripts/index.js')
+
   body
     h1#title="Room Occupancy"
     br
@@ -16,8 +19,16 @@ html
     br
     br
     br
+
+    #requestMax
+        input#max.enter(type='text', name='enter', value='', placeholder="Maximum Occupancy")
+        br
+        input#submit(type='button', value='Submit')
+        #warning
+
     #highlight
       h1#count=counter
+    h1#WARNING
     h2#time
     
     br
@@ -25,6 +36,24 @@ html
     div#about Brought to you by Qiuyu Zhang, Kevin Wong, Sichen Zhao, Regan Hsu
 
 
-script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-script(src='javascripts/index.js')
+
+
+
+
 script.
+    $(document).ready(function(){
+        var max = $('#max');
+        $('#submit').click(function() {
+            if(!isNaN(max.val())) {
+                $('#highlight').css('display', 'block');
+                $('#requestMax').css('display', 'none');
+
+                $.getJSON("http://107.170.149.67/reset", function() {
+                        go(max.val());
+                     }).fail()
+
+            } else {
+                $('#warning').html("You must submit a positive whole number.");
+            }
+        });
+    })
