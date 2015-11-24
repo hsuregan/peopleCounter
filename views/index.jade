@@ -48,7 +48,8 @@ script.
 
 
         $('#submit').click(function() {
-            if(!isNaN(max.val())) {
+            console.log(max.val());
+            if(!isNaN(max.val()) && max.val() > 0) {
                 $('#about').fadeOut(50, function(){
                     $('#requestMax').fadeOut(15, function(){
                     setTimeout(function(){ 
