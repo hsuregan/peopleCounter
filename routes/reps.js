@@ -5,6 +5,7 @@ var reps = 0;
 
 router.get('/', function(req, res, next) {
   //graph.push(counter);
+  reps = 0;
   res.render('reps', {reps: reps});
 });
 
