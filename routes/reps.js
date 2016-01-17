@@ -18,6 +18,11 @@ router.get('/reset', function(req, res, next) {
 	res.json(reps);
 })
 
+router.get('/resetNow', function(req, res, next) {
+	reps = 0;
+	res.redirect('/reps');
+})
+
 router.post('/increment', function(req, res, next){
 	reps += 1;
 	res.json(reps);

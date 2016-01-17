@@ -3,6 +3,8 @@ html
   head
     title= title
     script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+
     link(rel='stylesheet', href='/font/font.css')
 
     link(rel='stylesheet', href='/stylesheets/reps.css')
@@ -12,17 +14,46 @@ html
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
     script(src='javascripts/reps.js')
 
+
   body
-    h1#title="Reps"
+    h1#title="MyReps"
     br
-    br
-    br
-    br
+
+    
+    .row
+      .col-sm-4
+        #highlight
+          h1#reps=reps
+        br
+        br
+      .col-sm-8
+        table#myFriends.table
+          tr
+            td 
+              Strong
+                | My Friend
+            td 
+              Strong
+                | My Rep
+          tr
+            td Chris
+            td 100 Reps
+          tr
+            td Lindsay
+            td 95 Reps
+          tr
+            td Regan
+            td 700 Reps
+          tr
+            td Qiuyu
+            td 100 Reps
+    
     br
 
 
-    #highlight
-      h1#reps=reps
+    a(href='/reps/resetNow')#submit Reset My Reps
+
+
     
     script.
         $(document).ready(function(){
