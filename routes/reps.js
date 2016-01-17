@@ -18,6 +18,12 @@ router.get('/reset', function(req, res, next) {
 	res.json(reps);
 })
 
+router.post('/test', function(req, res,next) {
+	console.log(req);
+	console.log(res);
+	res.json(count);
+})
+
 router.get('/count', function(req, res, next){
 	res.json(reps);
 });
