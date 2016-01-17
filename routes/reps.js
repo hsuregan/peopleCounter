@@ -24,6 +24,7 @@ router.post('/increment', function(req, res, next){
 })
 
 router.post('/test', function(req, res,next) {
+	console.log(req);
 	res.json(count);
 })
 
