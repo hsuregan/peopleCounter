@@ -8,10 +8,15 @@ router.get('/', function(req, res, next) {
   res.render('reps', {reps: reps});
 });
 
-router.post('/increment', function(req, res, next) {
+router.get('/increment', function(req, res, next) {
 	reps += 1;
 	res.json(reps);
 });
+
+router.get('/reset', function(req, res, next) {
+	reps = 0;
+	res.json(reps);
+})
 
 router.get('/count', function(req, res, next){
 	res.json(reps);
