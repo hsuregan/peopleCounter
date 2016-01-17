@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+    link(rel='stylesheet', href='/font/font.css')
+
+    link(rel='stylesheet', href='/stylesheets/reps.css')
+
+    link(rel='stylesheet', href='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css')
+    script(src='//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(src='javascripts/reps.js')
+
+  body
+    h1#title="Reps"
+    br
+    br
+    br
+    br
+    br
+
+
+    #highlight
+      h1#reps=reps
+    
+    script.
+        $(document).ready(function(){
+            getReps();
+        });
+
+
+
+
+
+

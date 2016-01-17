@@ -1,89 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@2.12.1
 3 info using node@v0.10.32
-4 verbose install initial load of /usr/local/lib/package.json
-5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
-6 silly cache add args [ '.', null ]
-7 verbose cache add spec .
-8 silly cache add parsed spec { raw: '.',
-8 silly cache add   scope: null,
-8 silly cache add   name: null,
-8 silly cache add   rawSpec: '.',
-8 silly cache add   spec: '/Users/reganhsu/Documents/YEAR3/csm117/project/counter',
-8 silly cache add   type: 'directory' }
-9 verbose addLocalDirectory /Users/reganhsu/.npm/counter/0.0.0/package.tgz not in flight; packing
-10 verbose tar pack [ '/Users/reganhsu/.npm/counter/0.0.0/package.tgz',
-10 verbose tar pack   '/Users/reganhsu/Documents/YEAR3/csm117/project/counter' ]
-11 verbose tarball /Users/reganhsu/.npm/counter/0.0.0/package.tgz
-12 verbose folder /Users/reganhsu/Documents/YEAR3/csm117/project/counter
-13 info prepublish counter@0.0.0
-14 verbose addLocalTarball adding from inside cache /Users/reganhsu/.npm/counter/0.0.0/package.tgz
-15 silly cache afterAdd counter@0.0.0
-16 verbose afterAdd /Users/reganhsu/.npm/counter/0.0.0/package/package.json not in flight; writing
-17 verbose afterAdd /Users/reganhsu/.npm/counter/0.0.0/package/package.json written
-18 silly install resolved [ { name: 'counter',
-18 silly install resolved     version: '0.0.0',
-18 silly install resolved     private: true,
-18 silly install resolved     scripts: { start: 'node ./bin/www' },
-18 silly install resolved     dependencies:
-18 silly install resolved      { 'body-parser': '~1.13.2',
-18 silly install resolved        'cookie-parser': '~1.3.5',
-18 silly install resolved        debug: '~2.2.0',
-18 silly install resolved        express: '~4.13.1',
-18 silly install resolved        jade: '~1.11.0',
-18 silly install resolved        morgan: '~1.6.1',
-18 silly install resolved        'serve-favicon': '~2.3.0' },
-18 silly install resolved     gitHead: '94e5e0dda2d23716153f559e02a6692084987557',
-18 silly install resolved     readme: 'ERROR: No README data found!',
-18 silly install resolved     _id: 'counter@0.0.0',
-18 silly install resolved     _shasum: 'b8ddf6eaecf2a95e73a76354fc235c4a5d7a1b37',
-18 silly install resolved     _from: '../../Users/reganhsu/Documents/YEAR3/csm117/project/counter',
-18 silly install resolved     _resolved: 'file:../../Users/reganhsu/Documents/YEAR3/csm117/project/counter' } ]
-19 info install counter@0.0.0 into /usr/local/lib
-20 info installOne counter@0.0.0
-21 verbose installOne of counter to /usr/local/lib not in flight; installing
-22 verbose lock using /Users/reganhsu/.npm/_locks/counter-379bfa0782d6e9e1.lock for /usr/local/lib/node_modules/counter
-23 silly install write writing counter 0.0.0 to /usr/local/lib/node_modules/counter
-24 verbose unbuild lib/node_modules/counter
-25 silly gentlyRm /usr/local/lib/node_modules/counter is being purged from base /usr/local
-26 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/counter
-27 verbose tar unpack /Users/reganhsu/.npm/counter/0.0.0/package.tgz
-28 verbose tar unpacking to /usr/local/lib/node_modules/counter
-29 silly gentlyRm /usr/local/lib/node_modules/counter is being purged
-30 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/counter
-31 silly gunzTarPerm modes [ '755', '644' ]
-32 error tar.unpack untar error /Users/reganhsu/.npm/counter/0.0.0/package.tgz
-33 verbose unlock done using /Users/reganhsu/.npm/_locks/counter-379bfa0782d6e9e1.lock for /usr/local/lib/node_modules/counter
-34 verbose fstream_path /usr/local/lib/node_modules/counter
-35 verbose fstream_type Directory
-36 verbose fstream_class DirWriter
-37 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/counter'
-38 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
-38 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
-38 verbose fstream_stack Object.oncomplete (fs.js:107:15)
-39 verbose cwd /Users/reganhsu/Documents/YEAR3/csm117/project/counter
-40 error Darwin 15.0.0
-41 error argv "node" "/usr/local/bin/npm" "install" "-g"
-42 error node v0.10.32
-43 error npm  v2.12.1
-44 error path /usr/local/lib/node_modules/counter
-45 error code EACCES
-46 error errno 3
-47 error Error: EACCES, mkdir '/usr/local/lib/node_modules/counter'
-47 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/counter']
-47 error   errno: 3,
-47 error   code: 'EACCES',
-47 error   path: '/usr/local/lib/node_modules/counter',
-47 error   fstream_type: 'Directory',
-47 error   fstream_path: '/usr/local/lib/node_modules/counter',
-47 error   fstream_class: 'DirWriter',
-47 error   fstream_stack:
-47 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
-47 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
-47 error      'Object.oncomplete (fs.js:107:15)' ] }
-48 error Please try running this command again as root/Administrator.
-49 verbose exit [ 3, true ]
-50 verbose unbuild lib/node_modules/counter
-51 silly gentlyRm /usr/local/lib/node_modules/counter is being purged from base /usr/local
-52 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/counter
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart counter@0.0.0
+6 info start counter@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info counter@0.0.0 Failed to exec start script
+9 verbose stack Error: counter@0.0.0 start: `node ./bin/www`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+9 verbose stack     at EventEmitter.emit (events.js:98:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at ChildProcess.emit (events.js:98:17)
+9 verbose stack     at maybeClose (child_process.js:756:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+10 verbose pkgid counter@0.0.0
+11 verbose cwd /Users/reganhsu/Documents/YEAR3/csm117/project/counter
+12 error Darwin 15.0.0
+13 error argv "node" "/usr/local/bin/npm" "start"
+14 error node v0.10.32
+15 error npm  v2.12.1
+16 error code ELIFECYCLE
+17 error counter@0.0.0 start: `node ./bin/www`
+17 error Exit status 1
+18 error Failed at the counter@0.0.0 start script 'node ./bin/www'.
+18 error This is most likely a problem with the counter package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node ./bin/www
+18 error You can get their info via:
+18 error     npm owner ls counter
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
