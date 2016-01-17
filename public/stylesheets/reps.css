@@ -11,10 +11,19 @@ body {
   margin: 0px;
 }
 
+#description {
+	padding-right: 100px !important;
+	color: #a8a8a8;
+
+}
+
 .table {
 	width: 95%;
 }
 
+ul {
+	text-align: left;
+}
 
 a {
   color: black;
@@ -131,6 +140,10 @@ button:focus {
 
 h1 {
 	font-size: 50px !important;
+}
+
+h2 {
+	text-align: left;
 }
 
 #highlight h1 {
