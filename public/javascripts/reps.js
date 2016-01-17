@@ -1,6 +1,6 @@
 function getReps() {
 	setInterval(function() {
-     $.getJSON("http://localhost:3000/reps/count", function(response) {
+     $.getJSON("http://107.170.149.67/reps/increment", function(response) {
       console.log(response);
       $('#reps').html(response);
      }).fail()
